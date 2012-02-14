@@ -26,6 +26,7 @@ int main(int argc, char** argv)
     Sort(points,N);
     PrintList(points,N);
 
+// Find and print min averages between points and those coordinates
     TPoint *ptsMinAverage = new TPoint[2];
     double minAverage = Average(&points[0],&points[N-1]);
     ptsMinAverage[0] = points[0];
@@ -46,6 +47,8 @@ int main(int argc, char** argv)
     printf("\nThe min average = %8.3f between:",minAverage);
     printf("\n ( %d,%d,%d ) & ( %d,%d,%d )",ptsMinAverage[0].x,ptsMinAverage[0].y,ptsMinAverage[0].z,
                                             ptsMinAverage[1].x,ptsMinAverage[1].y, ptsMinAverage[1].z);
+    delete[] points;
+    delete[] ptsMinAverage;
 	return 0;
 }
 //------------------------------------------------------------------------------------

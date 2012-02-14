@@ -46,7 +46,7 @@ int main(int argc, char** argv)
             if(topCount == TOPKN_COUNT) break;
         }
     }
-
+    delete[] groups;
 	return 0;
 }
 void PrintList(TGroups * gr, int count )

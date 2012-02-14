@@ -28,7 +28,7 @@ int main(int argc, char** argv)
     scanf("%d",&quizQuestionsCount);
     StartQuiz(dictionary,quizQuestionsCount);
     //PrintDictionary(dictionary,N);
-
+    delete[] dictionary;
 	return 0;
 }
 //---------------------------------------------------------------
